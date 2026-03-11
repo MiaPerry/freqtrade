@@ -1,0 +1,53 @@
+{
+    "max_open_trades": 1,
+    "stake_currency": "USDT",
+    "stake_amount": 100,
+    "dry_run": true,
+    "timeframe": "1d",
+    "strategy": "KDJStrategy",
+    "datadir": "user_data/data/binance",
+    "db_url": "sqlite:///test.db",
+    "export": "trades",
+    "fee": 0.001,
+    "cancel_open_orders_on_exit": false,
+    "forcebuy_enable": true,
+    "internals": {
+        "process_throttle_secs": 5,
+        "heartbeat_interval": 60
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "",
+        "secret": "",
+        "sandbox": false,
+        "ccxt_config": {
+            "enableRateLimit": true,
+            "skipUpdateFees": true
+        },
+        "ccxt_async_config": {
+            "enableRateLimit": true
+        },
+        "pair_whitelist": [
+            "BTC/USDT",
+            "ETH/USDT",
+            "AVAX/USDT",
+            "SUI/USDT"
+        ],
+        "pair_blacklist": [],
+        "_params": {
+            "options": {
+                "warnOnFetchTickerLimits": false,
+                "fetchTradesMethod": "publicGetAggTrades",
+                "adjustForTimeDifference": true
+            }
+        }
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "disableparamexport": true,
+    "refresh_pairs": false,
+    "markets_refresh_interval": 0
+}
